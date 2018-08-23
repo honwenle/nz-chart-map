@@ -33,9 +33,10 @@
     }]
   };
 
-  axios.post('http://121.43.112.129:8102/Statistics/ProductionInfo').then(({data}) => {
-    if (data.Code == 1) {
-      option0.series[0].data = data.List
+  axios('http://47.105.116.152:5209/GISMap/GetCompanyList').then(({data}) => {
+    if (data.Code == 10000) {
+      // option0.series[0].data = data.Content.List
+      option0.series[0].data = [{name: 'a', value: 12}, {name: 'B', value: 122}]
     }
     chart0.setOption(option0)
   })

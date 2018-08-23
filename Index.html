@@ -12,86 +12,70 @@
 
 <body>
   <div class="wrap">
-    <div class="col left">
-       <h1 class="map-title">温州市农资监管平台</h1><a href="http://121.43.112.129:8100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="col">
+      <div class="chart">
+        <div class="c-title icon icon1">数据概览</div>
+        <div class="c-box">
+          <div class="summary">
+            <div class="sm-item">
+              <div id="companycount"></div>
+              <span>商家总数</span>
+            </div>
+            <div class="sm-item">
+              <div id="nzcount"></div>
+              <span>农资种类总数</span>
+            </div>
+            <div class="sm-item">
+              <div id="customercount"></div>
+              <span>总购买人数</span>
+            </div>
+            <div class="sm-item">
+              <div id="taskcount"></div>
+              <span>总执行任务数</span>
+            </div>
+            <div class="sm-item">
+              <div id="alertcount"></div>
+              <span>总预警数</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart">
+        <div class="c-title icon icon3">三过信息汇总</div>
+        <div class="c-box">
+          <div id="chart1" class="h100p"></div>
+        </div>
+      </div>
+      <div class="chart">
+        <div class="c-title icon icon5">台账信息</div>
+        <div class="c-box">
+          <div id="chart3" class="h100p"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <a href="http://121.43.112.129:8100"><h1 class="map-title">温州市农资监管平台</h1></a>
       <div id="chartx">
         <img src="./images/map.png" alt="">
       </div>
     </div>
-    <div class="col right">
-      <div class="row row1">
-        <div class="col col1">
-          <div class="chart">
-            <div class="c-title icon icon1">数据概览</div>
-            <div class="c-box">
-              <div class="summary">
-                <div class="sm-item">
-                  <div id="companycount"></div>
-                  <span>商家总数</span>
-                </div>
-                <div class="sm-item">
-                  <div id="nzcount"></div>
-                  <span>农资种类总数</span>
-                </div>
-                <div class="sm-item">
-                  <div id="customercount"></div>
-                  <span>总购买人数</span>
-                </div>
-                <div class="sm-item">
-                  <div id="taskcount"></div>
-                  <span>总执行任务数</span>
-                </div>
-                <div class="sm-item">
-                  <div id="alertcount"></div>
-                  <span>总预警数</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col col2">
-          <div class="chart">
-            <div class="c-title icon icon2">本月农资登记备案</div>
-            <div class="c-box">
-              <div id="chart0" class="chart"></div>
-            </div>
-          </div>
+    <div class="col">
+      <div class="chart">
+        <div class="c-title icon icon2">本月农资登记备案</div>
+        <div class="c-box">
+          <div id="chart0" class="h100p"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="chart">
-            <div class="c-title icon icon3">三过信息汇总</div>
-            <div class="c-box">
-              <div id="chart1" class="chart"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="chart">
-            <div class="c-title icon icon4">任务执行汇总</div>
-            <div class="c-box">
-              <div id="chart2" class="chart"></div>
-            </div>
-          </div>
+      <div class="chart">
+        <div class="c-title icon icon4">任务执行汇总</div>
+        <div class="c-box">
+          <div id="chart2" class="h100p"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="chart">
-            <div class="c-title icon icon5">台账信息</div>
-            <div class="c-box">
-              <div id="chart3" class="chart"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="chart">
-            <div class="c-title icon icon6">新增农资主体</div>
-            <div class="c-box">
-              <div id="chart4" class="chart"></div>
-            </div>
-          </div>
+      <div class="chart">
+        <div class="c-title icon icon6">新增农资主体</div>
+        <div class="c-box">
+          <div id="chart4" class="h100p"></div>
         </div>
       </div>
     </div>

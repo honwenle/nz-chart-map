@@ -2,6 +2,10 @@ body {
   margin: 0;
   color: #fff;
 }
+a{
+  color: #fff;
+  text-decoration: none;
+}
 
 .wrap {
   background: url('./images/bg.jpg') no-repeat;
@@ -12,48 +16,37 @@ body {
 
 .col {
   float: left;
-  width: 50%;
-  padding: 10px;
+  width: 33.33%;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .row,
 .wrap {
   overflow: hidden;
 }
-
-.row1 .c-box {
-  height: 200px;
+.chart{
+  margin: 20px;
 }
-
+.h100p{
+  height: 100%;
+}
 .c-box {
-  height: 300px;
+  height: calc(33vh - 30px);
   border: 3px solid #5373a6;
   border-radius: 1em;
+  box-sizing: border-box;
 }
-
-.col.left {
-  width: 35%;
-}
-
-.col.right {
-  width: 65%;
-}
-
-.row1 .col1 {
-  width: 65%;
-}
-
-.row1 .col2 {
-  width: 35%;
-}
-
-.chart {
-  height: 100%;
+.chart:first-child .c-box{
+  height: 15vh;
 }
 
 .c-title {
-  line-height: 2;
+  line-height: 30px;
+  height: 30px;
 }
 
 .icon::before {
