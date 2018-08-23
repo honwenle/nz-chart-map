@@ -33,7 +33,7 @@
     }]
   };
 
-  axios(baseurl + 'GetCompanyList').then(({data}) => {
+  axios('GetCompanyList').then(({data}) => {
     if (data.Code == 10000) {
       // option0.series[0].data = data.Content.List
       option0.series[0].data = [{name: 'a', value: 12}, {name: 'B', value: 122}]

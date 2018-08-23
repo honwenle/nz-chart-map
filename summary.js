@@ -1,9 +1,11 @@
 (function () {
-axios.post('http://121.43.112.129:8102/Statistics/Summary').then(({data}) => {
-  companycount.innerHTML = data.Model.companycount
-  nzcount.innerHTML = data.Model.nzcount
-  customercount.innerHTML = data.Model.customercount
-  taskcount.innerHTML = data.Model.taskcount
-  alertcount.innerHTML = data.Model.alertcount
+axios('GetMsgsByAll').then(({data}) => {
+  if (data.Code == 10000) {
+    totol1.innerHTML = data.Content.CompanyTotal
+    totol2.innerHTML = data.Content.ProductKindTotal
+    totol3.innerHTML = data.Content.BuyNZOrderCount
+    totol4.innerHTML = data.Content.TaskNormalTotal
+    totol5.innerHTML = data.Content.WarnBasicinfoTotal
+  }
 })
 })()
