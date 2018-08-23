@@ -1,38 +1,4 @@
 ﻿(function () {
-  // var myChart = echarts.init(document.getElementById('chartx'))
-  // echarts.registerMap('cangnan', cnJson)
-  // option = {
-  //   geo: {
-  //     type: 'map',
-  //     map: 'cangnan'
-  //   },
-  //   series: [{
-  //     type: 'effectScatter',
-  //     coordinateSystem: 'geo',
-  //     data: [{
-  //       name: 'xxx',
-  //       value: [120.5,27.3,200]
-  //     }],
-  //     symbolSize: function (val) {
-  //         return val[2] / 10;
-  //     },
-  //     showEffectOn: 'render',
-  //     rippleEffect: {
-  //         scale: 3,
-  //         brushType: 'stroke'
-  //     },
-  //     hoverAnimation: true,
-  //     itemStyle: {
-  //         normal: {
-  //             color: '#f00',
-  //             shadowBlur: 10,
-  //             shadowColor: '#333'
-  //         }
-  //     }
-  //   }]
-  // }
-  // myChart.setOption(option)
-
   var MIN_LAT = 27.136462,
       MAX_LAT = 27.594035,
       MIN_LNG = 120.065237,

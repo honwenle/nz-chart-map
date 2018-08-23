@@ -1,6 +1,6 @@
 ﻿(function () {
   var chart0 = echarts.init(document.getElementById('chart0'), 'light')
-  option0 = {
+  var option0 = {
     textStyle: {
       color: 'rgba(255, 255, 255, 0.5)'
     },
@@ -33,7 +33,7 @@
     }]
   };
 
-  axios('http://47.105.116.152:5209/GISMap/GetCompanyList').then(({data}) => {
+  axios(baseurl + 'GetCompanyList').then(({data}) => {
     if (data.Code == 10000) {
       // option0.series[0].data = data.Content.List
       option0.series[0].data = [{name: 'a', value: 12}, {name: 'B', value: 122}]
