@@ -24,7 +24,7 @@
       hoverAnimation: true,
       itemStyle: {
         normal: {
-          color: '#f00',
+          color: '#63DDDF',
           shadowBlur: 10,
           shadowColor: '#333'
         }

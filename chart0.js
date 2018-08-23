@@ -13,7 +13,7 @@
         color: 'rgba(255, 255, 255, 1)'
       },
       orient: 'vertical',
-      x: 'right',
+      x: '80%',
       top: 'center',
       itemGap: 30,
       align: 'left',
