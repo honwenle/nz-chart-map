@@ -16,14 +16,23 @@
       map: 'wz',
       aspectScale: .9,
       zoom: 1.2,
+      label: {
+        show: true,
+        color: '#FFF',
+        fontSize: '14'
+      },
       itemStyle: {
         areaColor: '#061020',
         borderColor: '#587AAE',
         borderWidth: '3'
       },
       emphasis: {
+        label: {
+          color: '#FFF'
+        },
         itemStyle: {
-          areaColor: '#4C84FD'
+          areaColor: '#4C84FD',
+          borderColor: '#63DDDF'
         }
       }
     },
