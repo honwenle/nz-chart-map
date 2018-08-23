@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  color: #fff;
+}
+
+.wrap {
+  background: url('./images/bg.jpg') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.col {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.row,
+.wrap {
+  overflow: hidden;
+}
+
+.row1 .c-box {
+  height: 200px;
+}
+
+.c-box {
+  height: 300px;
+  border: 3px solid #5373a6;
+  border-radius: 1em;
+}
+
+.col.left {
+  width: 35%;
+}
+
+.col.right {
+  width: 65%;
+}
+
+.row1 .col1 {
+  width: 65%;
+}
+
+.row1 .col2 {
+  width: 35%;
+}
+
+.chart {
+  height: 100%;
+}
+
+.c-title {
+  line-height: 2;
+}
+
+.icon::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+  line-height: 2;
+  margin: 0 6px;
+}
+
+.icon1::before {
+  background-image: url('images/icon1.png');
+}
+
+.icon2::before {
+  background-image: url('images/icon2.png');
+}
+
+.icon3::before {
+  background-image: url('images/icon3.png');
+}
+
+.icon4::before {
+  background-image: url('images/icon4.png');
+}
+
+.icon5::before {
+  background-image: url('images/icon5.png');
+}
+
+.icon6::before {
+  background-image: url('images/icon6.png');
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.sm-item div {
+  font-size: 32px;
+}
+
+.sm-item {
+  flex: 1;
+  text-align: center;
+}
+
+#chartx {
+  margin-top: 80px;
+  position: relative;
+}
+
+#chartx img {
+  width: 100%;
+}
+
+.map-title {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.dot{
+  /* display: none; */
+  position: absolute;
+  left: 50%;
+}
+.dot-type1:after{
+  background-color: #29cc97;
+}
+.dot-type2:after{
+  background-color: #ff5560;
+}
+.dot-type3:after{
+  background-color: #fec400;
+}
+.dot:after {
+  content: ' ';
+  position: absolute;
+  border-radius: 50%;
+  animation: ripple 2s 3;
+}
+
+@keyframes ripple {
+  0% {
+    left: 0;
+    top: 0;
+    opacity: .75;
+    width: 0;
+    height: 0;
+  }
+  100% {
+    left: -25px;
+    top: -25px;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
