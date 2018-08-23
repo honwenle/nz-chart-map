@@ -2,6 +2,15 @@
   var myChart = echarts.init(document.getElementById('chartx'))
   echarts.registerMap('wz', cnJson)
   var option = {
+    title: {
+      text: '温州市农资监管平台',
+      link: 'http://121.43.112.129:8100',
+      x:'center',
+      textStyle: {
+        fontSize: '50',
+        color: '#fff'
+      }
+    },
     geo: {
       type: 'map',
       map: 'wz'
