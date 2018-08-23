@@ -13,7 +13,19 @@
     },
     geo: {
       type: 'map',
-      map: 'wz'
+      map: 'wz',
+      aspectScale: .9,
+      zoom: 1.2,
+      itemStyle: {
+        areaColor: '#061020',
+        borderColor: '#587AAE',
+        borderWidth: '3'
+      },
+      emphasis: {
+        itemStyle: {
+          areaColor: '#4C84FD'
+        }
+      }
     },
     series: [{
       type: 'effectScatter',
