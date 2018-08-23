@@ -22,7 +22,7 @@
     xAxis: {
       type: 'category',
       //data: ['一月', '二月', '三月', '四月', '五月', '六月']
-data: ['十一月', '十二月','一月', '二月', '三月', '四月']
+      data: ['十一月', '十二月','一月', '二月', '三月', '四月']
     },
     yAxis: {
       type: 'value'
@@ -30,9 +30,9 @@ data: ['十一月', '十二月','一月', '二月', '三月', '四月']
     series: []
   }
 
-  axios.post('http://121.43.112.129:8102/Statistics/AlertInfo').then(({data}) => {
-    if (data.Code == 1) {
-      option1.series = data.List
+  axios('WarnBasicinfoChartDay').then(({data}) => {
+    if (data.Code == 10000) {
+      option1.series = data.Content.ListWarnBasicinfo
     }
     chart1.setOption(option1)
   })

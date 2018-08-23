@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
   <script src="/echarts.min.js"></script>
+  <script src="/330300.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="/axios.min.js"></script>
 </head>
@@ -53,9 +54,9 @@
       </div>
     </div>
     <div class="col">
-      <a href="http://121.43.112.129:8100"><h1 class="map-title">温州市农资监管平台</h1></a>
-      <div id="chartx">
-        <img src="./images/map.png" alt="">
+      <a class="map-title" href="http://121.43.112.129:8100"><h1>温州市农资监管平台</h1></a>
+      <div style="height: 80vh;">
+        <div id="chartx" class="h100p"></div>
       </div>
     </div>
     <div class="col">
@@ -82,7 +83,7 @@
 <script>
 axios.defaults.baseURL = 'http://47.105.116.152:5209/GISMap/'
 </script>
-<!-- <script src="chartx.js"></script> -->
+<script src="chartx.js"></script>
 <script src="summary.js"></script>
 <script src="chart0.js"></script>
 <!-- <script src="chart1.js"></script> -->
