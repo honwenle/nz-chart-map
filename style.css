@@ -34,6 +34,18 @@ a{
 .h100p{
   height: 100%;
 }
+.relative{
+  position: relative;
+}
+.map-mode{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: #061020;
+  border: #587AAE 2px solid;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
 .c-box {
   height: calc(33vh - 30px);
   border: 3px solid #5373a6;
