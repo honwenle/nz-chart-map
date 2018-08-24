@@ -13,8 +13,8 @@
         }
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KUphCVKw6GyfgZHtFsvdeTRL"></script>
-    <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
     <script src="/axios.min.js"></script>
+    <script src="url.js"></script>
     <title>地图展示</title>
 </head>
 <body>
@@ -23,16 +23,17 @@
 </html>
 <script type="text/javascript">
   var map = new BMap.Map("allmap", {enableMapClick: false})
-  map.disableDragging()
-  var centerPoint = new BMap.Point(120.563813,27.406666)
-  map.centerAndZoom(centerPoint, 12)
+  // map.disableDragging()
+  map.enableScrollWheelZoom(true)
+  var centerPoint = new BMap.Point(120.706479,28.001086)
+  map.centerAndZoom(centerPoint, 11)
 
   var opts = {
-    width: 250,
-    height: 90
+    width: 300,
+    height: 110
   }
-  axios('http://121.43.112.129:8102/api/company/GetList?pageSize=1000&pageIndex=1').then(({data}) => {
-    data.DT.forEach(row => {
+  axios('GetCompanyList').then(({data}) => {
+    data.Content.List.forEach(row => {
       var mPoint = new BMap.Point(row.fLng, row.fLat)
       var marker = new BMap.Marker(mPoint)
       map.addOverlay(marker)

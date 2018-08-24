@@ -1,0 +1,1 @@
+axios.defaults.baseURL = 'http://47.105.116.152:5209/GISMap/'
