@@ -20,9 +20,7 @@
       containLabel: true
     },
     xAxis: {
-      type: 'category',
-      //data: ['一月', '二月', '三月', '四月', '五月', '六月']
-      data: ['十一月', '十二月','一月', '二月', '三月', '四月']
+      type: 'category'
     },
     yAxis: {
       type: 'value'
@@ -32,7 +30,8 @@
 
   axios('WarnBasicinfoChartDay').then(({data}) => {
     if (data.Code == 10000) {
-      option1.series = data.Content.ListWarnBasicinfo
+      option1.series = data.Content.YAris
+      option1.xAxis.data = data.Content.XAris
     }
     chart1.setOption(option1)
   })

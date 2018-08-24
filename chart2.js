@@ -11,7 +11,7 @@
       textStyle: {
         color: 'rgba(255, 255, 255, 0.5)'
       },
-      data: ['定点巡查', '双随机', '监督抽检']
+      data: ['日常巡查', '监督抽检']
     },
     grid: {
       left: '3%',
@@ -21,8 +21,7 @@
     },
     xAxis: {
       type: 'category',
-           //data: ['一月', '二月', '三月', '四月', '五月', '六月']
-data: ['十一月', '十二月','一月', '二月', '三月', '四月']
+      data: []
     },
     yAxis: {
       type: 'value'
@@ -30,9 +29,10 @@ data: ['十一月', '十二月','一月', '二月', '三月', '四月']
     series: []
   }
 
-  axios.post('http://121.43.112.129:8102/Statistics/GetTaskByMonth').then(({data}) => {
-    if (data.Code == 1) {
-      option1.series = data.List
+  axios('TaskNormalChartMonth').then(({data}) => {
+    if (data.Code == 10000) {
+      option1.series = data.Content.YAris
+      option1.xAxis.data = data.Content.XAris
     }
     chart1.setOption(option1)
   })

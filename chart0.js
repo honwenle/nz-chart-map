@@ -8,20 +8,43 @@
       trigger: 'item',
       formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: {
+    legend: [{
       textStyle: {
         color: 'rgba(255, 255, 255, 1)'
       },
       orient: 'vertical',
-      x: '80%',
+      x: '10%',
       top: 'center',
       itemGap: 30,
       align: 'left',
-      data: ['待审核', '审核通过', '审核驳回']
-    },
+      data: ['农药', '兽药']
+    }, {
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)'
+      },
+      orient: 'vertical',
+      x: '60%',
+      top: 'center',
+      itemGap: 30,
+      align: 'left',
+      data: ['待审核', '审核通过', '审核驳回', '未审核']
+    }],
     series: [{
-      name: '访问来源',
+      name: 'A饼',
       type: 'pie',
+      center : ['35%', '50%'],
+      radius: ['50%', '70%'],
+      avoidLabelOverlap: false,
+      label: {
+        normal: {
+          show: false
+        }
+      },
+      data: []
+    }, {
+      name: 'B饼',
+      type: 'pie',
+      center : ['85%', '50%'],
       radius: ['50%', '70%'],
       avoidLabelOverlap: false,
       label: {
@@ -35,8 +58,8 @@
 
   axios('ProductAuthChart').then(({data}) => {
     if (data.Code == 10000) {
-      option0.series[0].data = [{name:'待审核', value: 10},{name:'审核通过', value: 10},{name:'审核驳回', value: 10}]
-      // option0.series[0].data = data.Content.ListArrayProductAuthCart
+      option0.series[0].data = data.Content.ListArrayProductAuthCart
+      option0.series[1].data = data.Content.ListArrayProductAuthStateCart
     }
     chart0.setOption(option0)
   })

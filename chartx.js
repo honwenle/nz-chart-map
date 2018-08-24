@@ -4,7 +4,7 @@
   var option = {
     title: {
       text: '温州市农资监管平台',
-      link: 'http://121.43.112.129:8100',
+      // link: 'http://121.43.112.129:8100',
       x:'center',
       textStyle: {
         fontSize: '50',
@@ -39,10 +39,7 @@
     series: [{
       type: 'effectScatter',
       coordinateSystem: 'geo',
-      data: [{
-        name: 'xxx',
-        value: [120.5, 27.3, 200]
-      }],
+      data: [],
       symbolSize: function (val) {
         return val[2] / 10;
       },
@@ -62,4 +59,28 @@
     }]
   }
   myChart.setOption(option)
+
+  if ("WebSocket" in window) {
+    var ws = new WebSocket("ws://47.105.116.152:5210")
+    ws.onopen = function () {
+      ws.send('连接成功')
+    }
+    ws.onmessage = function (evt) {
+      var data = JSON.parse(evt.data)
+      var arr = option.series[0].data
+      if (arr.length > 5) {
+        arr.shift()
+      }
+      arr.push({
+        name: data.id,
+        value: [data.fLng, data.fLat, 100]
+      })
+      myChart.setOption(option)
+    }
+    ws.onclose = function () {
+      console.log('连接已关闭')
+    }
+  } else {
+    alert('您的浏览器不支持 WebSocket!')
+  }
 })()
