@@ -157,3 +157,16 @@ a{
     height: 50px;
   }
 }
+
+.marquee{
+  margin: 15px;
+  overflow: hidden;
+}
+.mi-row{
+  padding: 6px 0;
+  transform: translateY(0);
+}
+.marquee.onScroll .mi-row{
+  transition: transform .5s;
+  transform: translateY(-100%)
+}

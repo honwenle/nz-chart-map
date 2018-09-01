@@ -1,5 +1,6 @@
 ﻿(function () {
   var myChart = echarts.init(document.getElementById('chartx'))
+  var marquee = document.getElementById('chart4')
   echarts.registerMap('wz', cnJson)
   var option = {
     title: {
@@ -76,6 +77,20 @@
         value: [data.fLng, data.fLat, 100]
       })
       myChart.setOption(option)
+
+      var mi = document.createElement('div')
+      mi.className = 'mi-row'
+      mi.innerHTML = `${data.cSeller}销售给${data.cRelate}${data.cProductName}`
+      if (marquee.childElementCount > 7) {
+        marquee.className = 'marquee onScroll'
+        setTimeout(() => {
+          marquee.appendChild(mi)
+          marquee.className = 'marquee'
+          marquee.removeChild(marquee.firstChild)
+        }, 500)
+      } else {
+        marquee.appendChild(mi)
+      }
     }
     ws.onclose = function () {
       console.log('连接已关闭')
