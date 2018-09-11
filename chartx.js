@@ -60,6 +60,9 @@
     }]
   }
   myChart.setOption(option)
+  myChart.on('click', function (params) {
+    location.href = 'map.html?city=' + params.name
+  });
 
   if ("WebSocket" in window) {
     var ws = new WebSocket("ws://47.105.116.152:5210")
