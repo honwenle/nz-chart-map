@@ -39,8 +39,8 @@
   var map = new BMap.Map("allmap", {enableMapClick: false})
   // map.disableDragging()
   map.enableScrollWheelZoom(true)
-  var city = location.href.split('city=')[1] || '温州市'
-  map.centerAndZoom(city, 11)
+  var city = location.href.split('city=')[1]
+  map.centerAndZoom(city || '温州市', city ? 12 : 11)
 
   var opts = {
     width: 300,
